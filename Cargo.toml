@@ -5,6 +5,9 @@ edition = "2021"
 authors = ["johnteper <johnteper@stellamar.tech>"]
 description = "Services monitor system using SMTP"
 license = "GPL-3.0"
+repository = "https://github.com/StellaMarTech/heimdall"
+homepage = "https://heimdall.stellamar.tech"
+
 
 [profile.release]
 lto = true
