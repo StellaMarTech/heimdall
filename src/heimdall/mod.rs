@@ -3,5 +3,5 @@
 pub mod service;
 pub mod mail;
 pub mod errors;
-mod macros;
+
 

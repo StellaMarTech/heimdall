@@ -271,6 +271,7 @@ dependencies = [
  "axum",
  "chrono",
  "dotenv",
+ "heimdall_errors",
  "jsonwebtokens",
  "lettre",
  "log",
@@ -281,6 +282,12 @@ dependencies = [
  "tokio",
  "uuid",
 ]
+
+[[package]]
+name = "heimdall_errors"
+version = "0.1.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "e5921e1410b4933c78eb8e6184ad372e5425cbfa4cf3d7d8eb1b227943e84626"
 
 [[package]]
 name = "hermit-abi"

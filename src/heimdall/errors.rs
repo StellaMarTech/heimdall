@@ -1,5 +1,5 @@
 use std::fmt::{Display, Formatter, Result};
-use crate::implement_error;
+use heimdall_errors::implement_error;
 
 #[derive(Debug, PartialEq, Copy, Clone)]
 pub enum ErrorKind {
