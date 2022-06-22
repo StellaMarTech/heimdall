@@ -1,4 +1,5 @@
 use std::fmt::{Display, Formatter, Result};
+use crate::implement_error;
 
 #[derive(Debug, PartialEq, Copy, Clone)]
 pub enum ErrorKind {
@@ -49,21 +50,5 @@ impl Display for HeimdallError {
         )
     }
 }
-
-mod errors_implementation {
-    use crate::implement_error;
-    use super::HeimdallError;
-    use super::ErrorKind::{
-        Dotenv,
-        Io,
-    };
-    use dotenv::Error as dotenvError;
-    use std::io::Error as ioError;
-
-
-
-
-    implement_error!(HeimdallError, dotenvError, Dotenv);
-    implement_error!(HeimdallError, ioError, Io);
-
-}
+implement_error!(HeimdallError, dotenv::Error, ErrorKind::Dotenv);
+implement_error!(HeimdallError, std::io::Error, ErrorKind::Io);
